@@ -48,3 +48,12 @@ body {
 table {
     border-spacing: 5px;
 }
+
+th {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+td {
+    text-align: center;
+}
