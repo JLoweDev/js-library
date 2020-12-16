@@ -41,21 +41,26 @@ body {
 }
 
 .maincontainer {
-  border: 2px solid blue;
   margin-bottom: 0px;
 }
 
 table {
   border-spacing: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 
 th {
+  background-color: #ced6e0;
   text-align: center;
   font-size: 1.7rem;
   color: #2f3542;
+  width: 300px;
+  padding: 5px;
 }
 
 td {
+  background-color: #dfe4ea;
   text-align: center;
   color: #2f3542;
 }
