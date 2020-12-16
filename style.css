@@ -28,6 +28,7 @@ body {
 }
 
 .addbook button {
+  width: 150px;
   border: none;
   border-radius: 5px;
   color: #2f3542;
