@@ -75,4 +75,5 @@ td button {
   margin: 2px;
   cursor: pointer;
   background-color: #eccc68;
+  font-weight: bold;
 }
