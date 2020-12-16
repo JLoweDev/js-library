@@ -64,3 +64,15 @@ td {
   text-align: center;
   color: #2f3542;
 }
+
+td button {
+  border: none;
+  border-radius: 5px;
+  color: #2f3542;
+  padding: 7px;
+  text-align: center;
+  display: inline-block;
+  margin: 2px;
+  cursor: pointer;
+  background-color: #eccc68;
+}
