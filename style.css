@@ -48,7 +48,7 @@ body {
 }
 
 .form-popup form {
-  display: block;
+  display: none;
 }
 
 .form-popup #closebtn {

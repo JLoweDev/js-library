@@ -13,6 +13,14 @@ function addBookToLibrary() {
   myLibrary.push();
 }
 
-/*function openForm() {
-  document.getElementById("myForm").style.display
-}*/
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("addbtn").style.display = "none";
+  document.getElementById("closebtn").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("closebtn").style.display = "none";
+  document.getElementById("addbtn").style.display = "block";
+}
