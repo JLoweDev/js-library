@@ -26,8 +26,12 @@ function renderBook(book) {
   const pagescell = row.insertCell(2);
   const readcell = row.insertCell(3);
   const deletecell = row.insertCell(4);
-
-
+  row.classList.add("tableitem");
+  titlecell.innerHTML = book.title;
+  authorcell.innerHTML = book.author;
+  pagescell.innerHTML = book.pages;
+  readcell.innerHTML = book.read;
+  deletecell.innerHTML = book.read;
 }
 
 function addBookToLibrary() {
