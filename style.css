@@ -41,6 +41,18 @@ body {
   background-color: #eccc68;
 }
 
+.form-popup form {
+  display: none;
+}
+
+.form-popup .closebtn {
+  display: none;
+}
+
+.form-popup .addbtn {
+  display: fixed;
+}
+
 .maincontainer {
   margin-bottom: 0px;
 }
