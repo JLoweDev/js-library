@@ -31,7 +31,11 @@ function renderBook(book) {
   authorcell.innerHTML = book.author;
   pagescell.innerHTML = book.pages;
   readcell.innerHTML = book.read;
-  deletecell.innerHTML = book.read;
+  deletecell.innerHTML = `<button id="removeBtn">X</button>`;
+  removeBtn.addEventListener('click', () => {
+    myLibrary.splice(myLibrary.indexOf(book), 1);
+    render();
+  });
 }
 
 function addBookToLibrary() {
@@ -52,3 +56,4 @@ function closeForm() {
   document.getElementById("closebtn").style.display = "none";
   document.getElementById("addbtn").style.display = "block";
 }
+
