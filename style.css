@@ -27,6 +27,12 @@ body {
   align-self: center;
 }
 
+.form-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-popup button {
   width: 150px;
   border: none;
@@ -42,14 +48,14 @@ body {
 }
 
 .form-popup form {
+  display: block;
+}
+
+.form-popup #closebtn {
   display: none;
 }
 
-.form-popup .closebtn {
-  display: none;
-}
-
-.form-popup .addbtn {
+.form-popup #addbtn {
   display: fixed;
 }
 
