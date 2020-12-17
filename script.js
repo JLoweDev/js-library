@@ -10,7 +10,9 @@ function Book(title, author, pages, read) {
 let newBook
 
 function render() {
-  
+  const table = document.getElementById("tableid");
+  const tableitems = document.querySelectorAll(".tableitem");
+  tableitems.forEach(tableitem => table.deleteRow(-1));
 }
 
 function addBookToLibrary() {
