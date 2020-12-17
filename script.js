@@ -1,16 +1,23 @@
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+    this.title = myForm.title.value;
+    this.author = myForm.author.value;
+    this.pages = myForm.pages.value;
+    this.read = myForm.read.checked;
 }
 
-let newBook = new Book(title, author, pages, read)
+let newBook
+
+function render() {
+  
+}
 
 function addBookToLibrary() {
-  myLibrary.push();
+  newBook = new Book(title, author, pages, read);
+  myLibrary.push(newBook);
+  render();
+  myForm.reset();
 }
 
 function openForm() {
