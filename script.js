@@ -27,17 +27,25 @@ function renderBook(book) {
   const readcell = row.insertCell(3);
   const deletecell = row.insertCell(4);
   row.classList.add("tableitem");
+  row.setAttribute("id", myLibrary.indexOf(book))
   titlecell.innerHTML = book.title;
   authorcell.innerHTML = book.author;
   pagescell.innerHTML = book.pages;
   readcell.innerHTML = book.read;
-  deletecell.innerHTML = `<button id="removeBtn">X</button>`;
-  let removeBtn = document.querySelector("#removeBtn");
-  removeBtn.addEventListener('click', () => {
-    myLibrary.splice(myLibrary.indexOf(book), 1);
-    render();
-  });
+  deletecell.innerHTML = `<button class="removeBtn">X</button>`;
+  document.querySelectorAll(".removeBtn").forEach(item => {
+    item.addEventListener("click", (e) => {
+      console.log(e.target.parentElement.parentElement.id)
+      myLibrary.splice(e.target.parentElement.parentElement.id, 1);
+      render();
+  })
+  })
 }
+
+/*removeBtn.addEventListener('click', () => {
+  myLibrary.splice(myLibrary.indexOf(book), 1);
+  render();
+});*/
 
 
 
