@@ -96,3 +96,11 @@ td button {
   background-color: #eccc68;
   font-weight: bold;
 }
+
+.trueread {
+  background-color: #7bed9f;
+}
+
+.falseread {
+  background-color: #ff6b81;
+}
