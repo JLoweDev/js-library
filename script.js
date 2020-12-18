@@ -16,6 +16,13 @@ function render() {
   for (let i=0; i<myLibrary.length; i++){
     renderBook(myLibrary[i]);
   }
+  document.querySelectorAll(".removeBtn").forEach(item => {
+    item.addEventListener("click", (e) => {
+      console.log(e.target.parentElement.parentElement.id)
+      myLibrary.splice(e.target.parentElement.parentElement.id, 1);
+      render();
+  })
+  })
 }
 
 function renderBook(book) {
@@ -33,21 +40,8 @@ function renderBook(book) {
   pagescell.innerHTML = book.pages;
   readcell.innerHTML = book.read;
   deletecell.innerHTML = `<button class="removeBtn">X</button>`;
-  document.querySelectorAll(".removeBtn").forEach(item => {
-    item.addEventListener("click", (e) => {
-      console.log(e.target.parentElement.parentElement.id)
-      myLibrary.splice(e.target.parentElement.parentElement.id, 1);
-      render();
-  })
-  })
+  
 }
-
-/*removeBtn.addEventListener('click', () => {
-  myLibrary.splice(myLibrary.indexOf(book), 1);
-  render();
-});*/
-
-
 
 function addBookToLibrary() {
   newBook = new Book(title, author, pages, read);
