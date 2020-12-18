@@ -40,7 +40,6 @@ function renderBook(book) {
   pagescell.innerHTML = book.pages;
   readcell.innerHTML = book.read;
   deletecell.innerHTML = `<button class="removeBtn">X</button>`;
-  
 }
 
 function addBookToLibrary() {
