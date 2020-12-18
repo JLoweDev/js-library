@@ -40,7 +40,20 @@ function render() {
       console.log(e.target.parentElement.parentElement.id)
       myLibrary.splice(e.target.parentElement.parentElement.id, 1);
       render();
+    })
   })
+  document.querySelectorAll(".readBtn").forEach(item => {
+    item.addEventListener("click", (e) => {
+      console.log(e.target.parentElement.parentElement.id);
+      console.log(myLibrary[e.target.parentElement.parentElement.id].read)
+      if (myLibrary[e.target.parentElement.parentElement.id].read === true) {
+        myLibrary[e.target.parentElement.parentElement.id].read = false;
+        render();
+      } else {
+        myLibrary[e.target.parentElement.parentElement.id].read = true;
+        render();
+      }
+    })
   })
 }
 
@@ -57,7 +70,7 @@ function renderBook(book) {
   titlecell.innerHTML = book.title;
   authorcell.innerHTML = book.author;
   pagescell.innerHTML = book.pages;
-  readcell.innerHTML = book.read;
+  readcell.innerHTML = `<button class="readBtn">${book.read}</button>`;
   deletecell.innerHTML = `<button class="removeBtn">X</button>`;
 }
 
