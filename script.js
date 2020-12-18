@@ -1,4 +1,23 @@
-let myLibrary = [];
+let myLibrary = [
+  {
+    title: "The Hobbit",
+    author: "J.R.R Tolkein",
+    pages: "304",
+    read: true
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    pages: "218",
+    read: false
+  },
+  {
+    title: "Catch-22",
+    author: "Joseph Heller",
+    pages: "453",
+    read: true
+  }
+];
 
 function Book(title, author, pages, read) {
     this.title = myForm.title.value;
@@ -61,3 +80,4 @@ function closeForm() {
   document.getElementById("addbtn").style.display = "block";
 }
 
+render();
