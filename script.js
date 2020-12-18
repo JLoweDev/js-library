@@ -32,11 +32,14 @@ function renderBook(book) {
   pagescell.innerHTML = book.pages;
   readcell.innerHTML = book.read;
   deletecell.innerHTML = `<button id="removeBtn">X</button>`;
+  let removeBtn = document.querySelector("#removeBtn");
   removeBtn.addEventListener('click', () => {
     myLibrary.splice(myLibrary.indexOf(book), 1);
     render();
   });
 }
+
+
 
 function addBookToLibrary() {
   newBook = new Book(title, author, pages, read);
