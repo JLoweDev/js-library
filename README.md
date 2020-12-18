@@ -2,5 +2,5 @@
 
 ### Issues
 
-1. Delete button must be fixed
+1. Event Listeners must be fixed on delete buttons
 1. Read button must be toggleable
